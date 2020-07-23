@@ -3,7 +3,7 @@
   "repository": "https://github.com/death-angel-141/Discord-Music-Bot.git",
   "env": {
       "BOT_TOKEN": {
-            "description": "Please Insert your Discord Bot Token from https://discord.com/developers/",
+            "description": "Please Insert your Discord Bot Token from https://discord.com/developers/applications",
             "required": true
         }
      },   

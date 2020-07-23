@@ -449,9 +449,9 @@ class MusicPlayer(commands.Cog,name='Music'):
             if msg.voice_client.is_playing() is True or self.player[msg.guild.id]['queue']:
                 self.player[msg.guild.id]['queue'].clear()
                 msg.voice_client.stop()
-                return await msg.voice_client.disconnect(), await msg.message.add_reaction(emoji='✅')
+                return await msg.voice_client.disconnect(), await msg.message.add_reaction(emoji='🆘')
             
-            return await msg.voice_client.disconnect(), await msg.message.add_reaction(emoji='✅')
+            return await msg.voice_client.disconnect(), await msg.message.add_reaction(emoji='🆘')
         
         if msg.author.voice is None:
             return await msg.send("You must be in the same voice channel as bot to disconnect it via command")
@@ -544,13 +544,13 @@ class MusicPlayer(commands.Cog,name='Music'):
 
         if msg.voice_client is None:
             if channel is None:
-                return await msg.author.voice.channel.connect(), await msg.message.add_reaction(emoji='✅')
+                return await msg.author.voice.channel.connect(), await msg.message.add_reaction(emoji='🆘')
             
-            return await channel.connect(), await msg.message.add_reaction(emoji='✅')
+            return await channel.connect(), await msg.message.add_reaction(emoji='🆘')
         
         else:
             if msg.voice_client.is_playing() is False and not self.player[msg.guild.id]['queue']:
-                return await msg.author.voice.channel.connect(), await msg.message.add_reaction(emoji='✅')
+                return await msg.author.voice.channel.connect(), await msg.message.add_reaction(emoji='🆘')
 
 
     @join.before_invoke
